@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head profile="http://gmpg.org/xfn/11">
+	<meta charset="UTF-8" />
+	<title> 普通立体声如何Up-mix到5.1声道:弯路 1- 识途马</title>
+        <meta name="copyright" content="design by Leonma@sigtuma.com" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="../style.css" type="text/css" media="screen" />
+	<body>
+<div id="article_page">
+	
+       
+
+  <!--正文 begin -->
+<div id="article_main">
+<div class="post" id="post">
+<div><h6>普通立体声如何Up-mix到5.1声道:弯路 1</h6></div>
+	                <div class="postinfo"><p>作者: LeonMa | 时间: 2014年8月1日 </p></div>
+			<div class="postcontent"><p><strong>前言1：</strong>作为一个影音爱好者，笔者一直对电影的多声道环绕声系统比较感兴趣。还在中学时从一本书上看到了杜比定向逻辑环绕的介绍文章，提到最简单的环绕声产生方法是环绕音箱分别接功放输出的L声道“+”端和R声道“+”端，形成类似L-R的减法器，过滤掉两个声道中的共同部分，留下的声音包含“环境”信息。当然这种环绕声道只有也只能提供“环境”信息，没有方位信息，在看电影时能增加一部分临场感。</p>
+<p><a href="http://sigtuma.com/wp-content/uploads/2014/08/prologicII.jpg"><img class="alignnone size-full wp-image-61" src="http://sigtuma.com/wp-content/uploads/2014/08/prologicII.jpg" alt="prologicII" width="241" height="101" /></a></p>
+<p>这个方法自己实验过，在只有VCD的2.0声道音频的年代，这样看电影音效的确好些。又过了好多年，在pt80和百事高音乐论坛上逛时看到有许多Upmix-DTS CD（所谓UPmix-DTS主要将2声道音乐升码upmix到）5.1声道环绕声并编码压缩为DTS（Digital Surround ）5.1声道数码环绕的DTS音频）的音乐可以下载，笔者一想这不和我当年的实践很像吗？这一想不要紧，接下来就有了下面的折腾之路。</p>
+<p>ps：这里要提前说明的是，立体声Up-mix到5.1声道或者制作Up-mix DTS音频图的就是DIY过程中的乐趣，与正规厂家的真 DTS CD差别还是巨大的。</p>
+<p><strong>弯路记录</strong><span id="more-41"></span></p>
+<p><strong>一、使用MP3 SURROUND</strong><strong>工具（MP3SXConverterV1.1.0</strong><strong>）将普通MP3</strong><strong>转成含5.1</strong><strong>声道信息的特殊MP3</strong><strong>格式。</strong></p>
+<p>1、MP3 SURROUND介绍</p>
+<p>Fraunhofer IIS和Agere联合开发的MP3 SURROUND技术实现了5.1声道环绕的高品质音频，应用范围相当广泛，可以在网络音乐发布、广播系统、PC视听应用、游戏音效、消费电子产品和车载音响等方面发挥作用。尽管集成了多个声道，但是Thomson表示MP3 SURROUND文件相对于普通MP3（采样率相当）并没有太大的增加，相对于其他环绕多声道音频格式就只有它们的一半了。更为重要的，MP3 SURROUND提供了良好的兼容性，可以在现有的MP3软件、MP3播放器上正常使用。</p>
+<p><a href="http://sigtuma.com/wp-content/uploads/2014/08/image001.jpg"><img class="alignnone size-medium wp-image-45" src="http://sigtuma.com/wp-content/uploads/2014/08/image001-300x127.jpg" alt="image001" width="300" height="127" /></a></p>
+<p><a href="http://sigtuma.com/wp-content/uploads/2014/08/image002.gif"><img class="alignnone size-full wp-image-46" src="http://sigtuma.com/wp-content/uploads/2014/08/image002.gif" alt="image002" width="484" height="280" /></a></p>
+<p>2、MP3 SURROUND 的格式：转为MP3 SURROUND的MP3是一种特殊的MP3格式文件，只所以称为特殊，是因为该MP3格式只有在其制定的播放器上播放时能解码出5.1声道，在其他通用MP3播放器上只能识别为立体声。</p>
+<p>3、实际转换操作</p>
+<p>（1）由于MP3SXConverterV1.1.0只支持输入44.1khz 128kpbs的MP3 ，所以在转换前需要用千千静听等工具将欲转换为5.1声道的立体声音乐先转换为44.1khz 1 128kpbs的MP3格式</p>
+<p>（2）将需转换的MP3文件和MP3SXConverterV1.1.0都放在英文目录下（中文目录不支持）</p>
+<p>（3）执行mp3SXconv.exe，出来的界面如下图</p>
+<p><a href="http://sigtuma.com/wp-content/uploads/2014/08/image003.png"><img class="alignnone size-full wp-image-47" src="http://sigtuma.com/wp-content/uploads/2014/08/image003.png" alt="image003" width="254" height="144" /></a></p>
+<p>这时，只需要将需转换的MP3拖入mp3SXconv.exe的程序框中，在选择输出路径即可。</p>
+<p>4、MP3 SURROUND格式文件的播放</p>
+<p>（1）用官方播放器MP3sPlayer2.1.0播放，如下图，拖入转换后的MP3文件后，播放器显示为5.1声道</p>
+<p><a href="http://sigtuma.com/wp-content/uploads/2014/08/image005.png"><img class="alignnone size-medium wp-image-48" src="http://sigtuma.com/wp-content/uploads/2014/08/image005-300x240.png" alt="image005" width="300" height="240" /></a></p>
+<p>使用SRS Audio Sandbox查看，有输入信号的跳动显示，在用MP3sPlayer2.1.0播放时可以看到该音乐的确转换为5.1声道模式，其同一时刻各声道信息不一样（体现了的环绕和中置声道不是简单的复制发出L R声道的信息）</p>
+<p><a href="http://sigtuma.com/wp-content/uploads/2014/08/image007.png"><img class="alignnone size-medium wp-image-49" src="http://sigtuma.com/wp-content/uploads/2014/08/image007-300x168.png" alt="image007" width="300" height="168" /></a></p>
+<p>（2）用Fraunhofer IIS的Winamp插件播放</p>
+<p>除了用用官方播放器MP3sPlayer2.1.0播放5.1声道MP3文件外，Fraunhofer IIS还推出了Winamp播放插件：in_mp3s.dll</p>
+<p>同样播放时查看SRS Audio Sandbox的输入信号，6个声道均有不同信息。</p>
+<p><a href="http://sigtuma.com/wp-content/uploads/2014/08/image009.png"><img class="alignnone size-medium wp-image-50" src="http://sigtuma.com/wp-content/uploads/2014/08/image009-300x230.png" alt="image009" width="300" height="230" /></a></p>
+</div>	
+
+<!--正文 end -->		       
+		</div>
+
+		<div class="copyright">
+		       <p>▼ 提示：</p>
+		       <p>除注明外, <a href="http://sigtuma.com"/>识途马-LeonMa的个人博客</a>文章均为原创。
+		       转载请保留本文地址谢谢。</p>
+		</div>
+	       
+		
+		<div align="center"><a href="../">首页</a> | <a href="../archives.html">归档</a> | <a href="../comment.html">留言</a></div>
+		
+		</div>
+		
+
+
+
+	</div>
+</body>
+</html>

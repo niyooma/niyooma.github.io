@@ -1,12 +1,12 @@
 ﻿var author = 'LeonMa';
 
-var p_title = '效率最低的联系方式6';
+var p_title = '没能去参与救援，献点血也算出份力吧';
 
-var p_time = '2014年08月17日';
+var p_time = '2014年08月6日';
 
-var p_url = 'http://sigtuma.com/?p=124';
+var p_url = 'articles/p006.html';
 
-var p_exp = '6666今儿个被叫到单位加班，向近30个单位以传真的方式收集文件。各种费力悲催，忙到现在还有几家单位的没有收齐。大喊一声：传真，效率最低的联系方式非你莫属了!';
+var p_exp = '亲历了家乡地震，伤亡惨重<br />由于工作原因，没能去参与救援，献点血也算出份力吧<p><a href="http://ww1.sinaimg.cn/mw690/005GofyIgw1ej2zpsph1oj30e80j10tx.jpg"><br /></a><a href="http://ww4.sinaimg.cn/mw690/005GofyIgw1ej2zprqyu9j30e80j175x.jpg"><img class="alignleft" src="http://ww4.sinaimg.cn/mw690/005GofyIgw1ej2zprqyu9j30e80j175x.jpg" alt="" width="285" height="383" /></a><img class="aligncenter" src="http://ww1.sinaimg.cn/mw690/005GofyIgw1ej2zpsph1oj30e80j10tx.jpg" alt="" width="283" height="378" />';
 
 ﻿﻿document.writeln('<div class="post" id="post">');
 document.writeln('<h2><div class="time">' + author + ' | ' + p_time + ' </div>');

@@ -1,12 +1,12 @@
 ﻿var author = 'LeonMa';
 
-var p_title = '效率最低的联系方式5';
+var p_title = '一直进步的小胖妞';
 
-var p_time = '2014年08月17日';
+var p_time = '2014年08月02日';
 
-var p_url = 'http://sigtuma.com/?p=124';
+var p_url = 'articles/p005.html';
 
-var p_exp = '今儿个被叫到单位加班，向近30个单位以传真的方式收集文件。各种费力悲催，忙到现在还有几家单位的没有收齐。大喊一声：传真，效率最低的联系方式非你莫属了!';
+var p_exp = '小胖妞最近学会的新技能：学鸟飞、用小马桶、吃苹果、爬、坐木马还有喊爸爸';
 
 ﻿﻿document.writeln('<div class="post" id="post">');
 document.writeln('<h2><div class="time">' + author + ' | ' + p_time + ' </div>');

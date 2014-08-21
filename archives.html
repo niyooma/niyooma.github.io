@@ -25,60 +25,18 @@
        <ul class="list-group">
           <li class="list-group-item title">文章归档列表</a>
           </li>
-          <li class="list-group-item title">
-          <a href="articles/p014.html">静态博客正式上线</a>
-          </li>
-          <li class="list-group-item title">
-          <a href="articles/p013.html">效率最低的联系方式</a>
-          </li>
-          
-          <li class="list-group-item title">
-          <a href="articles/p012.html">用声音充电?</a>
-          </li>
-           
-           <li class="list-group-item title">
-          <a href="articles/p011.html">所谓藏头诗</a>
-          </li>
-          
-          <li class="list-group-item title">
-          <a href="articles/p010.html">在侧边栏随机显示电影台词</a>
-          </li>
-          
-          <li class="list-group-item title">
-          <a href="articles/p009.html">默哀</a>
-          </li>
-           
-          <li class="list-group-item title">
-          <a href="articles/p008.html">问禅师之码农版</a>
-          </li>
-           
-          <li class="list-group-item title">
-          <a href="articles/p007.html">写实的热门电视剧们</a>
-          </li>
-           
-          <li class="list-group-item title">
-          <a href="articles/p006.html">没能去参与救援，献点血也算出份力吧</a>
-          </li>
-           
-          <li class="list-group-item title">
-          <a href="articles/p005.html">一直进步的小胖妞</a>
-          </li>
-           
-          <li class="list-group-item title">
-          <a href="articles/p004.html">才想起来晚上又有爸爸去哪儿了</a>
-          </li>
-           
-          <li class="list-group-item title">
-          <a href="articles/p003.html">普通立体声如何Up-mix到5.1声道:弯路 1</a>
-          </li>
-           
-          <li class="list-group-item title">
-          <a href="articles/p002.html">试用wordpress的iphone app	</a>
-          </li>
-           
-          <li class="list-group-item title">
-          <a href="articles/p001.html">世界，你好</a>
-          </li>
+         <script src="post_list.js" type="text/javascript" charset="utf-8"></script>	
+<script>
+var list_cnt_b = list_cnt - 1;
+
+ for (var i=list_cnt_b;i>=0;i--)
+  {    
+ document.write('  <li class="list-group-item title">'); 
+ document.write('  <a href="' + postarch[i][1] +'">' + postarch[i][0] + '</a>'); 
+  document.write(' </li>'); 
+ }
+
+</script>
             
         </ul>
       </div>

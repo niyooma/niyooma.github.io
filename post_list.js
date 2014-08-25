@@ -1,4 +1,4 @@
-var list_cnt =14;
+var list_cnt =15;
 ﻿var postarch=new Array();
  
 for(var i=0;i<list_cnt;i++){
@@ -70,4 +70,10 @@ postarch[12][1]="articles/p013.html";
 postarch[13][0]="静态博客正式上线"; 
 
 postarch[13][1]="articles/p014.html";
+
+postarch[14][0]="普通立体声如何Up-mix到5.1声道:弯路 2"; 
+
+postarch[14][1]="articles/p015.html";
+
+
 

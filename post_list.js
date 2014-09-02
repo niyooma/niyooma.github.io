@@ -1,4 +1,4 @@
-var list_cnt =15;
+var list_cnt =16;
 ﻿var postarch=new Array();
  
 for(var i=0;i<list_cnt;i++){
@@ -75,5 +75,8 @@ postarch[14][0]="普通立体声如何Up-mix到5.1声道:弯路 2";
 
 postarch[14][1]="articles/p015.html";
 
+postarch[15][0]="如何用grub24dos引导wubi安装的ubuntu"; 
+
+postarch[15][1]="articles/p016.html";
 
 

@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head profile="http://gmpg.org/xfn/11">
+	<meta charset="UTF-8" />
+	<title> 如何用grub24dos引导wubi安装的ubuntu- 识途马</title>
+        <meta name="copyright" content="design by Leonma@sigtuma.com" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="../style.css" type="text/css" media="screen" />
+	<body>
+<div id="article_page">
+	
+       
+
+
+<div id="article_main">
+<div class="post" id="post">
+
+  <!--正文 begin -->
+<div><h6>如何用grub24dos引导wubi安装的ubuntu</h6></div>
+	                <div class="postinfo"><p>作者: LeonMa | 时间: 2014年9月1日 </p></div>
+			<div class="postcontent"><div>
+<p><strong>一、背景</strong><br />
+出于尝鲜，使用wubi安装的方式在电脑上安装了ubuntu 10.04，在常用软件、字体设置等折腾得差不多顺手时，发现wps linux版和百度云的linux客户端bcloud等软件无法在ubuntu 10.04下安装，因此想安装ubuntu12.04。</p>
+<p>在安装ubuntu12.04时发现要先卸载ubuntu 10.04才能继续，不想之前的折腾就这么丢失，因此思考着怎么能使多个wubi安装的ubuntu并存。之前用grub4dos成功引导过wubi安装的ubuntu9.04，套用老办法来引导ubuntu 10.04，却怎么也不成功，可能是从ubuntu10.04开始采用grub2引导的缘故把，无奈，只能另寻他法。<br />
+<strong>二、目的</strong><br />
+1、用grub24dos引导wubi安装的ubuntu。<br />
+2、实现wubi安装的ubuntu的文件夹名字可以更改。<br />
+3、实现同时多个wubi安装的ubuntu并存，并分别能启动。<br />
+<strong>三、步骤</strong><br />
+1、在win7下安装grub24dos</p>
+<p>（1）下载grub24dos后将其解压到C:盘下，文件夹名为grub2；</p>
+<p>（2）进入C:\grub2\install目录，然后运行grub24dos.exe（需要管理员权限） ；</p>
+<p>（3）然后配置Grub2（不需要修改），点击OK（该步实际上是修改Windows BCD）；</p>
+<p>（4）重新启动系统后，在Grub2的引导菜单中便能够见到Grub2 For Dos选项，然后就可以进入Grub2了；</p>
+<p>下载地址：http://www.linuxidc.com/Linux/2012-07/66720.htm</p>
+<p>2、用BCD引导的方式进入wubi安装的ubuntu系统，进入/boot/grub，打开grub.cfg中相应段落，拷贝到win7系统根目录下的\grub2的grub.cfg文件的start-user-section和end-user-sectio之间</p>
+<p>下面是修改加入的引导ubuntu10.04的grub.cfg文件部分内容</p>
+<p>### BEGIN /etc/grub.d/10_lupin ###<br />
+menuentry &#8220;Ubuntu 10.04, Linux 2.6.32-21-generic&#8221; {<br />
+insmod ntfs<br />
+set root=&#8217;(hd0,7)&#8217;<br />
+search &#8211;no-floppy &#8211;fs-uuid &#8211;set 5430907b309065b0<br />
+loopback loop0 /ubuntu1004/disks/root.disk<br />
+set root=(loop0)<br />
+linux /boot/vmlinuz-2.6.32-21-generic root=/dev/sda7 loop=/ubuntu1004/disks/root.disk ro quiet splash<br />
+initrd /boot/initrd.img-2.6.32-21-generic<br />
+}<br />
+menuentry &#8220;Ubuntu 10.04, Linux 2.6.32-21-gengrub.cfgeric (recovery mode)&#8221; {<br />
+menuentry &#8220;Ubuntu 10.04, Linux 2.6.32-21-generic&#8221; {<br />
+insmod ntfs<br />
+set root=&#8217;(hd0,7)&#8217;<br />
+search &#8211;no-floppy &#8211;fs-uuid &#8211;set 5430907b309065b0<br />
+loopback loop0 /ubuntu/disks/root.disk<br />
+set root=(loop0)<br />
+linux /boot/vmlinuz-2.6.32-21-generic root=/dev/sda7 loop=/ubuntu/disks/root.disk ro single<br />
+initrd /boot/initrd.img-2.6.32-21-generic<br />
+}<br />
+### END /etc/grub.d/10_lupin ###</p>
+<p>3、保存，修改wubi安装的ubuntu文件夹名字，使之与grub.cfg文件一致，然后重启即可。</p>
+</div>
+</div>
+
+<!--正文 end -->		       
+		</div>
+
+		<div class="copyright">
+		       <p>▼ 提示：</p>
+		       <p>除注明外, <a href="http://sigtuma.com"/>识途马-LeonMa的个人博客</a>文章均为原创。
+		       转载请保留本文地址谢谢。</p>
+		</div>
+	       		<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1958793"></script>
+<!-- UY END -->
+</div>
+		
+		<div align="center"><a href="../">首页</a> | <a href="../archives.html">归档</a> | <a href="../comment.html">留言</a></div>
+		
+		</div>
+		
+
+
+
+	</div>
+</body>
+</html>
